@@ -1,0 +1,359 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JUJUTSU KAISEN | Cursed World</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #08080d;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: #101018;
+  border-bottom: 1px solid #32202c;
+}
+
+.logo {
+  color: #ff3155;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #ff3155;
+}
+
+.hero {
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(ellipse at center, #401022 0%, #160b18 40%, #08080d 75%);
+  animation: glow 4s infinite alternate;
+}
+
+@keyframes glow {
+  from { background-color: #08080d; }
+  to { background-color: #1b0b18; }
+}
+
+.tag {
+  color: #ff4665;
+  letter-spacing: 5px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 8vw, 88px);
+  line-height: 1.1;
+  text-shadow: 0 0 35px #ff1744;
+  animation: appear 1.2s ease;
+}
+
+.hero h1 span {
+  color: #ff3155;
+}
+
+.hero p {
+  color: #c5c2ce;
+  margin-top: 22px;
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 28px;
+  background: #e92349;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff5471;
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px #ff3155;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+  padding: 75px 8%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.section-title span {
+  color: #ff3155;
+}
+
+.subtitle {
+  text-align: center;
+  color: #aaa7b6;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #12121c;
+  border: 1px solid #292333;
+  border-radius: 12px;
+  padding: 28px;
+  transition: 0.35s;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #ff3155;
+  box-shadow: 0 8px 35px #ff174422;
+}
+
+.symbol {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #aaa7b6;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.badge {
+  display: inline-block;
+  color: #ff5873;
+  background: #35111f;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  margin-bottom: 14px;
+}
+
+.power {
+  text-align: center;
+  background: #101019;
+}
+
+.power-box {
+  max-width: 700px;
+  margin: auto;
+  border: 1px solid #34202f;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.power-box p {
+  color: #c5c2ce;
+  line-height: 1.9;
+  margin-top: 15px;
+}
+
+#secret {
+  display: none;
+  color: #ff7188;
+  margin-top: 20px;
+  animation: appear 0.6s ease;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  background: #050509;
+  color: #8e8999;
+  font-size: 13px;
+  line-height: 2;
+}
+
+footer span {
+  color: #ff3155;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 20px 5%;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  nav a {
+    margin: 0 7px;
+  }
+
+  section {
+    padding: 55px 6%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">JJK // WORLD</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#characters">Characters</a>
+    <a href="#powers">Powers</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="tag">WELCOME TO THE CURSED WORLD</div>
+    <h1>JUJUTSU<br><span>KAISEN</span></h1>
+    <p>
+      Enter a world where cursed energy defines power.
+      Discover legendary sorcerers, terrifying curses
+      and extraordinary techniques.
+    </p>
+    <a class="btn" href="#characters">EXPLORE CHARACTERS</a>
+  </section>
+
+  <section id="characters">
+    <h2 class="section-title">LEGENDARY <span>CHARACTERS</span></h2>
+    <p class="subtitle">Meet the strongest warriors of the cursed world.</p>
+
+    <div class="cards">
+      <article class="card">
+        <div class="symbol">👁️</div>
+        <div class="badge">THE STRONGEST SORCERER</div>
+        <h3>Satoru Gojo</h3>
+        <p>
+          Master of Limitless and the Six Eyes.
+          His Domain Expansion is Unlimited Void.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="symbol">👹</div>
+        <div class="badge">KING OF CURSES</div>
+        <h3>Ryomen Sukuna</h3>
+        <p>
+          A terrifying and brilliant fighter.
+          His Malevolent Shrine is a legendary domain.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="symbol">⚡</div>
+        <div class="badge">JUJUTSU SORCERER</div>
+        <h3>Yuta Okkotsu</h3>
+        <p>
+          A gifted special-grade sorcerer with
+          enormous cursed energy and powerful abilities.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="symbol">🖤</div>
+        <div class="badge">VESSEL OF SUKUNA</div>
+        <h3>Yuji Itadori</h3>
+        <p>
+          A determined fighter with extraordinary
+          physical strength and a powerful spirit.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="power" id="powers">
+    <h2 class="section-title">CURSED <span>TECHNIQUES</span></h2>
+    <p class="subtitle">Unlock the secrets of Jujutsu.</p>
+
+    <div class="power-box">
+      <h3>DOMAIN EXPANSION</h3>
+      <p>
+        The pinnacle of jujutsu sorcery.
+        A Domain Expansion creates a special space
+        where a sorcerer's technique gains extraordinary power.
+      </p>
+
+      <button class="btn" onclick="revealSecret()">
+        UNLOCK SECRET
+      </button>
+
+      <p id="secret">
+        YOUR CURSED ENERGY IS AWAKENING...
+        <br>WELCOME, JUJUTSU SORCERER!
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Created with <span>♥</span> by You</p>
+  <p>JUJUTSU KAISEN FAN WEBSITE | 2026</p>
+  <p>Fan-made project. Not an official website.</p>
+</footer>
+
+<script>
+function revealSecret() {
+  const secret = document.getElementById("secret");
+
+  if (secret.style.display === "block") {
+    secret.style.display = "none";
+  } else {
+    secret.style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
+Compose
+s
